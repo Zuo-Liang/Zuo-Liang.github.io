@@ -152,6 +152,70 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-集合引用类型" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/03/03/%E9%9B%86%E5%90%88%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B/">集合引用类型</a>
+    </h1>
+  
+
+        
+        <a href="/2022/03/03/%E9%9B%86%E5%90%88%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B/" class="archive-article-date">
+  	<time datetime="2022-03-03T13:37:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="6、集合引用类型"><a href="#6、集合引用类型" class="headerlink" title="6、集合引用类型"></a>6、集合引用类型</h1><h3 id="6-1、Object"><a href="#6-1、Object" class="headerlink" title="6.1、Object"></a>6.1、Object</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line">&#123;   </span><br><span class="line">    <span class="comment">// 到目前为止,大多数引用类型的示例使用的是Object类型.Object是ECMAScript中最常用的类型之一.</span></span><br><span class="line">    <span class="comment">//显示的创建Object的实例有两种方式.</span></span><br><span class="line">    <span class="comment">// 第一种是使用new操作符和Object构造函数.如下示例</span></span><br><span class="line">    <span class="keyword">let</span> person1 = <span class="keyword">new</span> <span class="title class_">Object</span>();</span><br><span class="line">    <span class="comment">// 第二种方式就是通过&quot;对象字面量&quot;来创建.如下示例</span></span><br><span class="line">    <span class="keyword">let</span> person2 = &#123;</span><br><span class="line">        name : <span class="string">&#x27;亮亮&#x27;</span>,</span><br><span class="line">        age : <span class="number">18</span>,</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="comment">//取出对象里面的属性值的方法有两种</span></span><br><span class="line">    <span class="comment">// 第一种最为常用.如下示例</span></span><br><span class="line">    <span class="keyword">let</span> name1 = person2.<span class="property">name</span>;</span><br><span class="line">    <span class="keyword">let</span> person = &#123;</span><br><span class="line">        name : <span class="string">&quot;Nicholas&quot;</span>,</span><br><span class="line">        <span class="attr">age</span>:<span class="number">18</span>,</span><br><span class="line">        <span class="string">&quot;first name&quot;</span> : <span class="string">&quot;www&quot;</span></span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="comment">// 第二种方式是以中括号来取出的,中括号里面的属性名一定要带(&quot;&quot;). 如下所示 </span></span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(person[<span class="string">&#x27;name&#x27;</span>])</span><br><span class="line">    <span class="keyword">let</span> propertyName = <span class="string">&quot;name&quot;</span></span><br><span class="line">    <span class="keyword">let</span> num = <span class="string">&#x27;age&#x27;</span></span><br><span class="line">    <span class="comment">// 下面的方法是把属性名存储在变量名里面在通过中括号来取出相应对象的属性值.</span></span><br><span class="line">    <span class="comment">//原因是声明的变量存储了一个字符串name值,然后通过person对象就可以访问到里面的name属性值</span></span><br><span class="line">    <span class="comment">//person[propertyName]等价于 person[&#x27;name&#x27;],propertyName这个变量存储了一个name,let propertyName = &quot;name&quot;</span></span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(person[propertyName]) <span class="comment">//Nicholas </span></span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(person[num])  <span class="comment">//18</span></span><br><span class="line">    <span class="comment">// 此方法使用与这样通过点方法取不出来的可以通过中括号来取 如下:</span></span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(person[<span class="string">&#x27;first name&#x27;</span>])</span><br><span class="line">&#125;</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">displayInfo</span>(<span class="params">args</span>)&#123;</span><br><span class="line">        <span class="keyword">let</span> output = <span class="string">&quot;&quot;</span>;</span><br><span class="line">        <span class="keyword">if</span>(<span class="keyword">typeof</span> args.<span class="property">name</span> == <span class="string">&quot;string&quot;</span>)&#123;</span><br><span class="line">            output += <span class="string">&quot;Name:&quot;</span> + args.<span class="property">name</span> + <span class="string">&quot;\n&quot;</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(<span class="keyword">typeof</span> args.<span class="property">age</span> == <span class="string">&quot;number&quot;</span>)&#123;</span><br><span class="line">            output += <span class="string">&quot;Age:&quot;</span> + args.<span class="property">age</span> + <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// alert(output);</span></span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(output)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="title function_">displayInfo</span>(&#123;</span><br><span class="line">        <span class="attr">name</span>:<span class="string">&quot;Nicholas&quot;</span>,</span><br><span class="line">        <span class="attr">age</span>:<span class="number">29</span></span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="title function_">displayInfo</span>(&#123;</span><br><span class="line">        <span class="attr">name</span>:<span class="string">&quot;Greg&quot;</span></span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="keyword">let</span> A = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">let</span> B = <span class="number">2</span>;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(A+=B)  <span class="comment">//3 console.log(A=A+B)等价于console.log(A+=B)</span></span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(A=A+B) <span class="comment">//5</span></span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(A,<span class="string">&quot;A&quot;</span>)</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(B,<span class="string">&quot;B&quot;</span>)</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2022/03/03/%E9%9B%86%E5%90%88%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-js基础" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
